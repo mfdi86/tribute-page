@@ -1,0 +1,25 @@
+$md-grid: (
+columns: 12,
+gutter: 30px,
+media: 600px,
+);
+
+$lg-grid: (
+columns: 12,
+gutter: 40px,
+media: 1000px,
+);
+
+.grid {
+  @include grid-column(12);
+
+  @include grid-media($md-grid) {
+    @include grid-column(6);
+
+    &.grid {
+      @include grid-media ($lg-grid) {
+        @include grid-column(4);
+        }
+      }
+    }
+  }

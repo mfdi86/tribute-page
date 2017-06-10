@@ -1,0 +1,5 @@
+@mixin h2border($outerOpacity, $innerOpacity) {
+  box-shadow:
+    rgba(#f20ba9, $outerOpacity) 0 1px 0,
+    rgba(black, $innerOpacity) 0 1px 0 inset;
+}
